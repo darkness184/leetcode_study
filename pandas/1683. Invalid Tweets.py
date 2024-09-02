@@ -16,6 +16,7 @@ which allows you to perform vectorized string operations on the name column (lik
 - using `employees['name']` to access `pandas.Series` object.
 """
 
+
 def invalid_tweets(tweets: pd.DataFrame) -> pd.DataFrame:
     df = tweets[tweets['content'].str.len() > 15]
     return df[['tweet_id']]

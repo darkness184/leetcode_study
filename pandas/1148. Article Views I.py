@@ -27,6 +27,7 @@ note:
 ==> After using `drop_duplicates()` the index still reamins the same, so we need to reset the index using `reset_index()` or parameter `ignore_index=True`.
 """
 
+
 def article_views(views: pd.DataFrame) -> pd.DataFrame:
     df = views[
         (views['author_id'] == views['viewer_id'])
