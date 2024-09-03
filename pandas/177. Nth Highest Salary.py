@@ -23,7 +23,7 @@ iloc[row_indexer, column_indexer]:
 
 def nth_highest_salary(employee: pd.DataFrame, N: int) -> pd.DataFrame:
     sorted_salaries = employee['salary'].drop_duplicates().sort_values(ascending=False, ignore_index=True)
-    print(sorted_salaries)
+
     if len(sorted_salaries) >= N and N > 0:
         nth_salary = sorted_salaries.iloc[N-1]
         return pd.DataFrame({f'getNthHighestSalary({N})': [nth_salary]})
